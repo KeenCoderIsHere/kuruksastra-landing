@@ -1,0 +1,463 @@
+/* ArtistsShowcase.module.css */
+
+/* ==================== Hide Scrollbar ==================== */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==================== Root Container ==================== */
+.showcase {
+  position: relative;
+  min-height: 200vh;
+  overflow-x: hidden;
+  background: linear-gradient(120deg,
+      #0e5035 0%,
+      #1a7048 30%,
+      #1d7a4f 50%,
+      #1a7048 70%,
+      #0e5035 100%);
+}
+
+.stickySection {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ==================== Curved Lines Background ==================== */
+.curvedBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.baseGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+      #0e5035 0%,
+      #1a7048 30%,
+      #1d7a4f 50%,
+      #1a7048 70%,
+      #0e5035 100%);
+}
+
+.curvesSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.curveLine {
+  vector-effect: non-scaling-stroke;
+}
+
+.radialGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 50%,
+      rgba(25, 100, 65, 0.5) 0%,
+      transparent 70%);
+  pointer-events: none;
+}
+
+/* ==================== Gold Borders - Full Height, Wider ==================== */
+.goldBorderLeft,
+.goldBorderRight {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 55px;
+  z-index: 100;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+}
+
+.goldBorderLeft {
+  left: 0;
+}
+
+.goldBorderRight {
+  right: 0;
+}
+
+.verticalLines {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  padding: 0 8px;
+  align-items: stretch;
+  height: 100%;
+}
+
+.thickLine {
+  flex: 0 0 6px;
+  background: linear-gradient(180deg, #c9a43a 0%, #d4af37 50%, #c9a43a 100%);
+}
+
+.thinLine {
+  flex: 0 0 3px;
+  background: linear-gradient(180deg, #b8941f 0%, #c9a43a 50%, #b8941f 100%);
+}
+
+/* ==================== Title Styles ==================== */
+.titleContainer {
+  position: absolute;
+  z-index: 30;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.mainTitle {
+  font-family: var(--font-alfa-slab), 'Georgia', serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #dfc754;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.titleLine {
+  display: block;
+}
+
+.titleLine:first-child {
+  font-size: 0.75em;
+  margin-bottom: 0.1em;
+}
+
+.litText {
+  letter-spacing: 0.05em;
+}
+
+.yearText {
+  display: inline;
+}
+
+/* ==================== Cards Container - Rectangle for corner positioning ==================== */
+.cardsContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  /* Rectangle dimensions for corner card placement */
+  width: min(85vw, 900px);
+  height: min(60vh, 500px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== Photo Card ==================== */
+.photoCard {
+  position: absolute;
+  width: 200px;
+  height: 260px;
+  background: #1a1a1a;
+  border: 3px solid #333;
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.5),
+    0 5px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.photoCardInner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoCardPlaceholder {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(212, 175, 55, 0.3);
+}
+
+.placeholderIcon {
+  width: 50%;
+  height: 50%;
+}
+
+/* ==================== Description/About Section - Seamless transition ==================== */
+.descriptionPanel {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 10rem;
+  overflow: hidden;
+  /* Pull section up to overlap with pinned section */
+  margin-top: -100px;
+  padding-top: calc(5rem + 100px);
+  border: none;
+  outline: none;
+}
+
+.descriptionBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+
+
+.descriptionContent {
+  position: relative;
+  z-index: 10;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.descParagraph {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #d4c67a;
+  margin-bottom: 1.6em;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.descParagraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Custom text selection colors */
+.descriptionPanel::selection,
+.descriptionContent::selection,
+.descParagraph::selection {
+  background-color: #d4c67a;
+  color: #0e5035;
+}
+
+.descriptionPanel::-moz-selection,
+.descriptionContent::-moz-selection,
+.descParagraph::-moz-selection {
+  background-color: #d4c67a;
+  color: #0e5035;
+}
+
+/* ==================== Reduced Motion ==================== */
+@media (prefers-reduced-motion: reduce) {
+  .photoCard {
+    transition: none !important;
+  }
+}
+
+/* ==================== Large Desktop (1400px+) ==================== */
+@media (min-width: 1400px) {
+  .mainTitle {
+    font-size: 5rem;
+  }
+
+  .photoCard {
+    width: 220px;
+    height: 280px;
+  }
+
+  .goldBorderLeft,
+  .goldBorderRight {
+    width: 65px;
+  }
+
+  .thickLine {
+    flex: 0 0 8px;
+  }
+
+  .thinLine {
+    flex: 0 0 4px;
+  }
+
+  .cardsContainer {
+    width: 1000px;
+    height: 550px;
+  }
+}
+
+/* ==================== Desktop (1024px - 1399px) ==================== */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .mainTitle {
+    font-size: 3.5rem;
+  }
+
+  .photoCard {
+    width: 180px;
+    height: 230px;
+  }
+
+  .cardsContainer {
+    width: 800px;
+    height: 450px;
+  }
+}
+
+/* ==================== Tablet (768px - 1023px) ==================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mainTitle {
+    font-size: 2.8rem;
+  }
+
+  .photoCard {
+    width: 140px;
+    height: 180px;
+  }
+
+  .goldBorderLeft,
+  .goldBorderRight {
+    width: 45px;
+  }
+
+  .verticalLines {
+    gap: 3px;
+    padding: 0 6px;
+  }
+
+  .thickLine {
+    flex: 0 0 5px;
+  }
+
+  .descriptionPanel {
+    padding: 4rem 6rem;
+  }
+
+  .cardsContainer {
+    width: 85vw;
+    height: 380px;
+  }
+}
+
+/* ==================== Small Tablet (480px - 767px) ==================== */
+@media (min-width: 480px) and (max-width: 767px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .photoCard {
+    width: 150px;
+    height: 190px;
+    border-width: 2px;
+  }
+
+  .goldBorderLeft,
+  .goldBorderRight {
+    width: 35px;
+  }
+
+  .verticalLines {
+    gap: 2px;
+    padding: 0 5px;
+  }
+
+  .thickLine {
+    flex: 0 0 4px;
+  }
+
+  .thinLine {
+    flex: 0 0 2px;
+  }
+
+  .descriptionPanel {
+    padding: 3rem 4rem;
+  }
+
+  .descParagraph {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .cardsContainer {
+    width: 85vw;
+    height: 280px;
+  }
+}
+
+/* ==================== Mobile (< 480px) ==================== */
+@media (max-width: 479px) {
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .titleLine:first-child {
+    font-size: 0.8em;
+  }
+
+  .photoCard {
+    width: 100px;
+    height: 130px;
+    border-width: 2px;
+  }
+
+  .goldBorderLeft,
+  .goldBorderRight {
+    width: 28px;
+  }
+
+  .verticalLines {
+    gap: 2px;
+    padding: 0 4px;
+  }
+
+  .thickLine {
+    flex: 0 0 3px;
+  }
+
+  .thinLine {
+    flex: 0 0 2px;
+  }
+
+  .descriptionPanel {
+    padding: 2rem 1.5rem;
+  }
+
+  .descParagraph {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .cardsContainer {
+    width: 70vw;
+    height: 160px;
+  }
+}
