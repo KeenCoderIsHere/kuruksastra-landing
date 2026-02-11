@@ -1,0 +1,168 @@
+/* ============================================
+   HEX REVEAL COMPONENT STYLES - PRECISION FIXED
+   
+   Geometric System:
+   - Safe area: 10% each side (outer hex at 80%)
+   - Proportions: 1 : 0.72 : 0.42
+   - Uniform gaps: 4% between layers
+   - All hexagons: true 6-point, no distortion
+   ============================================ */
+
+/* Root Container - full screen with gold backdrop */
+.revealRoot {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    background: #d4af37;
+}
+
+/* Aspect Ratio Wrapper - locks 1:1 for perfect hexagon */
+.aspectWrapper {
+    position: relative;
+    width: min(80vw, 80vh);
+    height: min(80vw, 80vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gold Background - fills wrapper */
+.goldBackground {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            #f0d88a 0%,
+            #e7c86a 25%,
+            #d4af37 50%,
+            #c9a43a 75%,
+            #b8941f 100%);
+    z-index: 1;
+}
+
+/* Green Polygon Layers */
+.greenLayer {
+    position: absolute;
+    will-change: clip-path;
+    transition: clip-path 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Gold Stroke Lines */
+.goldStroke {
+    position: absolute;
+    opacity: 0;
+    will-change: opacity;
+    pointer-events: none;
+}
+
+.goldStrokeSvg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center Badge - 42% of outer (proportional) */
+.centerBadge {
+    position: absolute;
+    width: 84%;
+    height: 84%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.9);
+    will-change: transform, opacity;
+
+}
+
+/* Badge outer gold ring */
+.badgeGold {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            #f5e6b3 0%,
+            #e7c86a 30%,
+            #d4af37 70%,
+            #c9a43a 100%);
+    /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+    clip-path: polygon(50% 0%,
+            100% 25%,
+            100% 75%,
+            50% 100%,
+            0% 75%,
+            0% 25%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Badge green border ring */
+.badgeGreenBorder {
+    position: absolute;
+    inset: 4%;
+    background: #0A4F30;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Badge inner gold fill */
+.badgeInnerGold {
+    position: absolute;
+    inset: 30%;
+    background: linear-gradient(180deg,
+            #f5e6b3 0%,
+            #e7c86a 25%,
+            #d4af37 60%,
+            #c9a43a 100%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inner decorative outline SVG */
+.badgeInnerOutlineSvg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Logo - centered with breathing room */
+.logo {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(0.8);
+    z-index: 5;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .greenLayer {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+    }
+
+    .goldStroke {
+        opacity: 1 !important;
+    }
+
+    .centerBadge {
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+
+    .logo {
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+}
