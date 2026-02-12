@@ -3,7 +3,7 @@ import { useState } from "react";
 import HexReveal from "@/components/HexReveal";
 import HeroSection from "@/components/HeroSection";
 import ArtistsShowcase from "@/components/ArtistsShowcase";
-
+import Footer from "@/pages/Footer";
 export default function Home() {
   const [loadingComplete, setLoadingComplete] = useState(false);
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       )}
       <HeroSection isVisible={loadingComplete} />
       <ArtistsShowcase autoPlay={true} />
+      <Footer />
     </>
   );
 }

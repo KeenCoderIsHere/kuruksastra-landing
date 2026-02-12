@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Alfa_Slab_One } from "next/font/google";
+import { Geist, Geist_Mono, Alfa_Slab_One, Albert_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,26 +11,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const alfaSlabOne = Alfa_Slab_One({
-  variable: "--font-alfa-slab",
+export const alfa = Alfa_Slab_One({
   weight: "400",
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Kuruksastra 2025 - Artists Showcase",
-  description: "Kuruksastra 2025 - SASTRA University's legendary cultural extravaganza",
-};
+export const albert = Albert_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+// export const metadata = {
+//   title: "Kuruksastra",
+//   description: "Event Website",
+// };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${alfaSlabOne.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
     </html>
   );
 }
-

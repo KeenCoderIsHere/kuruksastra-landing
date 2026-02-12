@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.Sponsor{
+  /* background-color: #F5E983; */
+  display: flex;
+  height: 602px;
+  width:100vw;
+  top:0;
+  position: relative;
+  background: 
+radial-gradient(56.07% 472.84% at 46.86% 49.06%, #B3902C 0%, #E7C65B 50%, #F8F08B 75%, #D7B44E 100%) ;
+
+}
+
+
+.Footer{
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+  justify-content: center;
+/* background: linear-gradient(138.64deg, #533A1C 12.77%, #664A28 30.76%, #6F522E 39.76%, #785A34 48.75%, #2B1B0C 84.74%), */
+background: 
+linear-gradient(132.26deg, #022F12 13.03%, #075233 30.92%, #022F12 59.86%, #186B3D 91.3%);
+
+;
+}
