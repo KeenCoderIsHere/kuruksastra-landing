@@ -1,28 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
+import CustBox from "./Sponsor_comp/CustBox";
 import { alfa } from "@/app/layout";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// Register ScrollTrigger
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
-
-const SponsorItem = ({ src, className = "" }) => (
-  <div className={`bg-[#c9a43a]/20 border border-[#b8941f]/30 rounded-xl flex items-center justify-center p-4 aspect-[3/2] transition-transform duration-200 hover:scale-105 ${className}`}>
-    <Image
-      src={src}
-      alt="sponsor"
-      width={160}
-      height={100}
-      className="object-contain w-full h-full"
-    />
-  </div>
-);
 
 const Sponsors = () => {
-  const containerRef = useRef(null);
   const sponsList = [
     "/sponsors/2IIM.png",
     "/sponsors/AIRTEL.png",
@@ -46,22 +27,73 @@ const Sponsors = () => {
   ];
 
   return (
-    <div id="sponsorship" ref={containerRef} className="Sponsor flex flex-col items-center justify-center px-6 sm:px-10 md:px-16 py-20 md:py-32 gap-12 md:gap-20 overflow-hidden">
+    <div className="Sponsor w-full flex justify-center overflow-hidden">
 
-      {/* Title */}
-      <p
-        className={`${alfa.className} text-center text-[28px] sm:text-[40px] md:text-[56px] lg:text-[78px] leading-none text-[#3A260D]`}
-      >
-        PREVIOUS SPONSORS
-      </p>
+      {/* CONTENT WRAPPER */}
+      <div className="relative w-[100vw] min-h-[720px]">
 
-      {/* Sponsor Cards - modern look, last row centered */}
-      <div className="w-full max-w-[1200px] flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5">
-        {sponsList.map((src, i) => (
-          <div key={i} className="w-[28%] sm:w-[22%] md:w-[17%] sponsor-card">
-            <SponsorItem src={src} />
+        {/* Top Row */}
+        <div className="flex justify-center">
+          <CustBox wid={310} hei={162} src={sponsList[3]} />
+          <CustBox wid={310} hei={162} src={sponsList[1]} />
+
+          <div className="w-[310px] h-[161px] flex items-center justify-center ">
+            <Image
+              src={sponsList[10]}
+              alt="KS Logo"
+              width={90}
+              height={90}
+              className="object-contain"
+            />
           </div>
-        ))}
+
+          <CustBox wid={310} hei={162} src={sponsList[18]} />
+          <CustBox wid={310} hei={162} src={sponsList[14]} />
+        </div>
+
+        {/* Title */}
+        <p
+          className={`${alfa.className}
+          absolute left-1/2 -translate-x-1/2 -translate-x-1/2
+          top-[250px]
+          text-[26px] sm:text-[40px] md:text-[54px] lg:text-[72px]
+          leading-none text-[#4B2E05] whitespace-nowrap`}
+        >
+          PREVIOUS SPONSORS
+        </p>
+
+        {/* Middle Row */}
+        <div className="flex bottom-[7] absolute w-full left-1/2 
+        -translate-x-1/2 -translate-y-6/5  
+        sm:bottom-[6px] md:bottom-[-95px] lg:bottom-[-95px]">
+          <CustBox wid={310} hei={162} src={sponsList[8]} />
+          <CustBox wid={310} hei={162} src={sponsList[0]} />
+          <CustBox wid={310} hei={162} src={sponsList[12]} />
+          <CustBox wid={310} hei={162} src={sponsList[16]} />
+          <CustBox wid={310} hei={162} src={sponsList[6]} />
+        </div>
+
+        {/* Bottom Sponsors */}
+        <div
+          className="
+            absolute bottom-[1px] w-full
+            grid
+            grid-cols-5
+            md:grid-cols-9 
+            justify-items-center
+          "
+        >
+          <CustBox wid={200} hei={100} src={sponsList[2]} />
+          <CustBox wid={170} hei={100} src={sponsList[17]} />
+          <CustBox wid={170} hei={100} src={sponsList[5]} />
+          <CustBox wid={170} hei={100} src={sponsList[4]} />
+          <CustBox wid={180} hei={100} src={sponsList[15]} />
+          <CustBox wid={170} hei={100} src={sponsList[7]} />
+          <CustBox wid={170} hei={100} src={sponsList[11]} />
+          <CustBox wid={170} hei={100} src={sponsList[13]} />
+          <CustBox wid={200} hei={100} src={sponsList[9]} />
+        </div>
+
       </div>
     </div>
   );

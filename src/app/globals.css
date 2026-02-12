@@ -27,6 +27,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -41,13 +42,17 @@ body {
 
 .Sponsor {
   display: flex;
-  min-height: auto;
   width: 100%;
   position: relative;
+  min-height: 720px;
   background:
     radial-gradient(56.07% 472.84% at 46.86% 49.06%, #B3902C 0%, #E7C65B 50%, #F8F08B 75%, #D7B44E 100%);
 }
 
+
+.sponsor-wrapper {
+  min-height: 720px;
+}
 
 .Footer {
   display: flex;
@@ -55,6 +60,13 @@ body {
   width: 100%;
   justify-content: center;
   background: #074d32;
+}
+
+.gold-title {
+  background: linear-gradient(to right, #B3902C, #F8F08B, #D7B44E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
 }
 
 .Footer::selection,

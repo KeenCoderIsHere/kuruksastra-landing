@@ -9,8 +9,8 @@ export default function CustBox({ wid, hei, src }) {
       <Image
         src={src}
         alt="sponsor"
-        width={wid * 0.7}
-        height={hei * 0.7}
+        width={wid * 0.8}
+        height={hei * 0.8}
         className="object-contain max-w-[80%] max-h-[80%]"
       />
     </div>

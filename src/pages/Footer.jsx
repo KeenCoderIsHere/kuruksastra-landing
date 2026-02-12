@@ -36,27 +36,48 @@ const Footer = () => {
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-5 gap-x-8 mt-4 text-white text-[16px] sm:text-[18px] md:text-[20px] justify-items-center lg:justify-items-start text-center lg:text-left">
+              
               <div className="committee-item">
+                <p className={`${albert.className} text-[20px] sm:text-[20px] md:text-[25px] 
+              bg-clip-text text-transparent 
+              bg-gradient-to-r from-[#B3902C] via-[#F8F08B] to-[#D7B44E]
+              text-center lg:text-left`}> Marketing and Cultural Coordinator</p>
                 <p>Amirthavarshini R</p>
                 <p className="text-[14px] sm:text-[16px] md:text-[18px] opacity-90">+91 99529 64049</p>
               </div>
 
               <div className="committee-item">
+                <p className={`${albert.className} text-[20px] sm:text-[20px] md:text-[25px] 
+              bg-clip-text text-transparent 
+              bg-gradient-to-r from-[#B3902C] via-[#F8F08B] to-[#D7B44E]
+              text-center lg:text-left`}>Infra and Finance Coordinator</p>
                 <p>Mukilan V M</p>
                 <p className="text-[14px] sm:text-[16px] md:text-[18px] opacity-90">+91 93844 37698</p>
               </div>
 
               <div className="committee-item">
+                <p className={`${albert.className} text-[20px] sm:text-[20px] md:text-[25px] 
+              bg-clip-text text-transparent 
+              bg-gradient-to-r from-[#B3902C] via-[#F8F08B] to-[#D7B44E]
+              text-center lg:text-left`}>Planning and Internal Relations Coordinator</p>
                 <p>Shanjay S</p>
                 <p className="text-[14px] sm:text-[16px] md:text-[18px] opacity-90">+91 96009 23014</p>
               </div>
 
               <div className="committee-item">
+                <p className={`${albert.className} text-[20px] sm:text-[20px] md:text-[25px] 
+              bg-clip-text text-transparent 
+              bg-gradient-to-r from-[#B3902C] via-[#F8F08B] to-[#D7B44E]
+              text-center lg:text-left`}>Promotions and External Relations Coordinator</p>
                 <p>Amurtha K R</p>
                 <p className="text-[14px] sm:text-[16px] md:text-[18px] opacity-90">+91 93619 71610</p>
               </div>
 
               <div className="committee-item">
+                <p className={`${albert.className} text-[20px] sm:text-[20px] md:text-[25px] 
+              bg-clip-text text-transparent 
+              bg-gradient-to-r from-[#B3902C] via-[#F8F08B] to-[#D7B44E]
+              text-center lg:text-left`}>Creative and Development Coordinator</p>
                 <p>Rajeshwar P</p>
                 <p className="text-[14px] sm:text-[16px] md:text-[18px] opacity-90">+91 80724 37287</p>
               </div>
@@ -74,7 +95,7 @@ const Footer = () => {
               Follow us
             </p>
 
-            <div className="grid grid-cols-5 gap-4 sm:gap-6 mt-4 justify-items-center">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 mt-4 justify-items-center">
               <a href="https://www.instagram.com/kuruksastra?igsh=c3VrYWEwdXgydTNj" target="_blank" className="social-link transition-transform duration-200 hover:scale-115">
                 <Image src="/foo/insta.png" alt="Instagram" width={40} height={40} className="sm:w-[45px] sm:h-[45px] lg:w-[50px] lg:h-[50px] rounded-lg" />
               </a>
