@@ -9,15 +9,15 @@ export default function Home() {
   return (
     <>
       {!loadingComplete && (
-        <HexReveal 
+        <HexReveal
           onComplete={() => setLoadingComplete(true)}
           logoSrc="/logo.png"
           logoAlt="Kuruksatna Logo"
         />
       )}
       <HeroSection isVisible={loadingComplete} />
-      <ArtistsShowcase autoPlay={true} />
-      <Footer />
+      {loadingComplete && <ArtistsShowcase autoPlay={true} />}
+      {loadingComplete && <Footer />}
     </>
   );
 }
