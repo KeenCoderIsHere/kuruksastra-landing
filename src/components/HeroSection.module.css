@@ -144,9 +144,11 @@
         top: 6vh;
         gap: 8px 16px;
         justify-content: center;
+        align-items: center;
         flex-direction: row;
         width: 100%;
         max-width: 95%;
+        padding: 0 10px;
     }
 
     .logo {
