@@ -12,8 +12,8 @@ const DescriptionPanel = forwardRef(function DescriptionPanel(props, ref) {
         <CurvedLinesBackground />
       </div>
 
-      <div className={styles.descriptionContent}>
-        <p className={styles.descParagraph}>
+      <div className={`${styles.descriptionContent}`}>
+        <p className={`${styles.descParagraph}`}>
           Kuruksastra, SASTRA Deemed University&apos;s legendary cultural extravaganza, marks its 20th
           edition this year. Drawing from the mythic grandeur of Kurukshetra—the epic battle of Hindu
           lore—Kuruksastra ignites Southern India&apos;s fiercest talent showdown, spotlighting proven stars

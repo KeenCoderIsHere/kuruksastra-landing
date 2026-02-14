@@ -42,7 +42,7 @@ const Sponsors = () => {
           <CustBox wid={310} hei={162} src={sponsList[1]} className="w-full" />
 
           {/* Logo in the middle */}
-          <CustBox wid={310} hei={162} src={sponsList[10]} className="w-full" />
+          <CustBox wid={310} hei={162} src={sponsList[10]} className="w-full !border-b-0" />
 
           <CustBox wid={310} hei={162} src={sponsList[14]} className="w-full" />
           <CustBox wid={310} hei={162} src={sponsList[8]} className="w-full" />
