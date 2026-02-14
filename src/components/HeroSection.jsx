@@ -23,8 +23,8 @@ export default function HeroSection({ isVisible }) {
         { opacity: 0 },
         { opacity: 1, duration: 1, ease: "power2.out" }
       )
-        // Animate gold frame
-        .fromTo(".hex-frame",
+        // Animate gold frame and dot pattern
+        .fromTo(".hex-frame, .dot-pattern",
           { scale: 0.9, opacity: 0 },
           { scale: 1, opacity: 1, duration: 1.2, ease: "back.out(1.5)" },
           "-=0.5"
@@ -96,6 +96,9 @@ export default function HeroSection({ isVisible }) {
 
   return (
     <section ref={heroRef} className={styles.hero}>
+      {/* Dot Pattern Background */}
+      <div className={`dot-pattern ${styles.dotPattern}`} />
+
       {/* Gold frame — style from LoadingAnimation, chamfered landscape shape */}
       <svg className={`hex-frame ${styles.hexFrame}`} viewBox="0 0 1200 700" preserveAspectRatio="none">
         <defs>

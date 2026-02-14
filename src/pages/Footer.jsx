@@ -10,7 +10,7 @@ const Footer = () => {
 
       <Sponsors />
 
-      <div id="contact" className="Footer relative flex flex-col w-full min-h-[500px] px-6 sm:px-10 md:px-16 lg:px-20 pt-10 md:pt-14 pb-6 md:pb-8">
+      <div id="contact" className="Footer relative flex flex-col w-full min-h-[500px] px-6 sm:px-10 md:px-16 lg:px-20 pt-10 md:pt-14 pb-6 md:pb-8 -translate-y-[4px] -mb-[4px]">
 
         {/* Contact Us Title */}
         <p

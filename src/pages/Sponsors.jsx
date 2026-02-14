@@ -31,34 +31,30 @@ const Sponsors = () => {
     <div id="sponsorship" className="Sponsor w-full flex justify-center overflow-hidden">
 
       {/* CONTENT WRAPPER */}
-      <div className="relative w-[100vw] min-h-[720px]">
+      <div className="relative w-[100vw] min-h-[550px] md:min-h-[600px]">
 
         {/* Top Row */}
-        <div className="flex justify-center">
-          <CustBox wid={310} hei={162} src={sponsList[3]} />
-          <CustBox wid={310} hei={162} src={sponsList[1]} />
+        {/* Top Row - Full Width Grid */}
+        {/* Top Row - Full Width Grid */}
+        {/* Top Row - Full Width Grid */}
+        <div className="grid grid-cols-5 w-full border-t-2 border-[#756C1A]">
+          <CustBox wid={310} hei={162} src={sponsList[3]} className="border-l-2 border-[#756C1A] w-full" />
+          <CustBox wid={310} hei={162} src={sponsList[1]} className="w-full" />
 
-          {/* <div className="w-[310px] h-[161px] flex items-center justify-center ">
-            <Image
-              src={sponsList[10]}
-              alt="KS Logo"
-              width={90}
-              height={90}
-              className="object-contain"
-            />
-          </div> */}
+          {/* Logo in the middle */}
+          <CustBox wid={310} hei={162} src={sponsList[10]} className="w-full" />
 
-          <CustBox wid={310} hei={162} src={sponsList[14]} />
-          <CustBox wid={310} hei={162} src={sponsList[8]} />
+          <CustBox wid={310} hei={162} src={sponsList[14]} className="w-full" />
+          <CustBox wid={310} hei={162} src={sponsList[8]} className="w-full" />
         </div>
 
         {/* Title */}
         <p
           className={`${alfa.className}
-          absolute left-1/2 -translate-x-1/2 -translate-x-1/2
-          top-[250px]
-          text-[26px] sm:text-[40px] md:text-[54px] lg:text-[72px]
-          leading-none text-[#4B2E05] whitespace-nowrap`}
+          absolute left-1/2 -translate-x-1/2
+          top-[45%] md:top-[54%] -translate-y-1/2 -mt-[80px]
+          text-[26px] sm:text-[40px] md:text-[62px] lg:text-[80px]
+          leading-none text-[#4B2E05] whitespace-nowrap z-10`}
         >
           PREVIOUS SPONSORS
         </p>

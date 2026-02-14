@@ -32,7 +32,7 @@
     user-select: none;
     font-variant-numeric: tabular-nums;
     line-height: 1;
-    padding: 0.12em 0.25em;
+    padding: 0.05em 0.15em;
 }
 
 /* Green plate on every number via ::before */

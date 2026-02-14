@@ -101,35 +101,37 @@ export default function ArtistsShowcase({
     const spreadPositions = getSpreadPositions(vw);
 
     // Set initial stacked state - all cards at center, NO rotation
+    // Set initial stacked state - cards start from below
     gsap.set(cards, {
       x: 0,
-      y: 0,
+      y: window.innerHeight * 0.8, // Start well below the view
       rotation: 0,
       scale: 1,
       opacity: 0,
       zIndex: (i) => 10 - i,
     });
 
-    // Create smooth scroll-triggered timeline - slower animation
+    // Create smooth scroll-triggered timeline
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top top',
-        end: '+=200%',
-        scrub: 1.5, // Reduced for better responsiveness
-        pin: sectionRef.current, // Explicit pinning
-        fastScrollEnd: true, // Prevents jumps on fast scrolls
+        end: '+=400%', // Increased scroll distance for longer animation sequence
+        scrub: 1,
+        pin: sectionRef.current,
+        fastScrollEnd: true,
         onLeave: () => onAnimationComplete?.(),
       },
     });
 
-    // Phase 1: Cards fade in while stacked
+    // Phase 1: Cards fly in from below and stack in center
     tl.to(cards, {
+      y: 0,
       opacity: 1,
-      stagger: 0.03,
-      duration: 0.2,
-      ease: 'power2.out',
-    }, 0);
+      stagger: 0.25, // One by one
+      duration: 1,
+      ease: 'power3.out',
+    });
 
     // Phase 2: Cards spread to their positions
     cards.forEach((card, i) => {
@@ -140,9 +142,8 @@ export default function ArtistsShowcase({
         y: pos.y,
         rotation: pos.rotation,
         ease: 'power2.out',
-        duration: 1.5,
-        overwrite: 'auto', // Prevent conflicts during fast scroll
-      }, 0.15);
+        duration: 2,
+      }, 2.5); // Start spreading after stacking is mostly done
     });
 
     // Phase 3: Blur title after cards are spread
