@@ -95,7 +95,7 @@ export default function HeroSection({ isVisible }) {
   if (!isVisible) return null;
 
   return (
-    <section ref={heroRef} className={`${styles.hero} translate-x-[-10px]`}>
+    <section ref={heroRef} className={styles.hero}>
       {/* Dot Pattern Background */}
       <div className={`dot-pattern ${styles.dotPattern}`} />
 
