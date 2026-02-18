@@ -70,7 +70,7 @@ const Footer = () => {
               bg-clip-text text-transparent 
               bg-gradient-to-r from-[#B3902C] via-[#F8F08B] to-[#D7B44E]
               text-center`}>Promotions and External Relations Coordinator</p>
-                <p>Amurtha K R</p>
+                <p>Amrutha K R</p>
                 <p className="text-[14px] sm:text-[16px] md:text-[18px] opacity-90">+91 93619 71610</p>
               </div>
 
@@ -114,7 +114,7 @@ const Footer = () => {
               </a>
 
               <a href="https://x.com/kssastra?t=m_rRvKLpVIyeU_rN9FSBiA&s=09" target="_blank" className="social-link transition-transform duration-200 hover:scale-115">
-                <Image src="/foo/tweet.png" alt="Twitter" width={40} height={40} className="sm:w-[45px] sm:h-[45px] lg:w-[50px] lg:h-[50px] rounded-lg" />
+                <Image src="/foo/x_logo.png" alt="X" width={40} height={40} className="sm:w-[45px] sm:h-[45px] lg:w-[50px] lg:h-[50px] rounded-lg" />
               </a>
             </div>
           </div>

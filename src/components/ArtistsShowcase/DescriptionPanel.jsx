@@ -14,25 +14,23 @@ const DescriptionPanel = forwardRef(function DescriptionPanel(props, ref) {
 
       <div className={`${styles.descriptionContent}`}>
         <p className={`${styles.descParagraph}`}>
-          Kuruksastra, SASTRA Deemed University&apos;s legendary cultural extravaganza, marks its 20th
-          edition this year. Drawing from the mythic grandeur of Kurukshetra—the epic battle of Hindu
-          lore—Kuruksastra ignites Southern India&apos;s fiercest talent showdown, spotlighting proven stars
-          and unearthing hidden gems. This electrifying fusion of style, substance, glamour, and color
-          features arts, music, literary events in English, Tamil, Telugu, and Hindi, plus mesmerizing dance
-          competitions.
+          Kuruksastra is one of South India's largest cultural extravaganzas. It is not just a fest, but a three day celebration of SASTRA's culture, talent, and diversity.
         </p>
 
         <p className={styles.descParagraph}>
-          Top institutes across India converge for cutthroat rivalry, all vying for the ultimate glory: the
-          overall championship title at Kuruksastra.
+          Inspired by Kurukshetra, the greatest battle of Hindu mythology, Kuruksastra transforms the campus into a battleground of brilliance where talent reigns supreme. Top institutes from across India gather for intense and exhilarating competitions in art, dance, music, and literary events across Tamil, English, Telugu, and Hindi, all striving to claim the coveted Overall Championship.
         </p>
 
         <p className={styles.descParagraph}>
-          The Pro Shows remain the pulsating heart of KS&apos;20. Renowned artists who ignite the stage have
-          been a staple of our pro-nights—icons like Shankar Mahadevan, Benny Dayal, Crazy Mohan,
-          Vijay Prakash, and Sid Sriram have thrilled massive crowds, leaving them craving encores. With
-          explosive past responses and our powerhouse student teams plus support staff, the 20th edition
-          promises to eclipse them all.
+          The highlight of Kuruksastra is its iconic Proshows that set the stage ablaze. The KS stage has witnessed electrifying performances by celebrated artists such as Sid Sriram, Benny Dayal, Shankar Mahadevan, Haricharan, Staccato Live, Sathyaprakash and So many more. Their performances define KS Nights, where music does not just play, it pulses through every heartbeat.
+        </p>
+
+        <p className={styles.descParagraph}>
+          In just a few years, Kuruksastra has risen to remarkable heights. Driven by an unstoppable student force and an exceptional organizing crew, KS continues to evolve, expand, and exceed expectations. Each edition builds upon the thunderous success of the previous one, raising the bar, amplifying the scale, and redefining what a cultural fest can truly be.
+        </p>
+
+        <p className={styles.descParagraph}>
+          Every year, the fest begins with electrifying sky shots and concludes with hearts full of memories and happiness. With over 1000 participants, vibrant crowds, and fierce competition, KS is your stage to shine, your arena to conquer, and your moment to make history.Bring your passion,power and show the world your unbreakable spirit. Kuruksastra awaits.
         </p>
       </div>
     </section>
