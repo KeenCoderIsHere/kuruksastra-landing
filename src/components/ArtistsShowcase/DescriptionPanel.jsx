@@ -30,7 +30,7 @@ const DescriptionPanel = forwardRef(function DescriptionPanel(props, ref) {
         </p>
 
         <p className={styles.descParagraph}>
-          Every year, the fest begins with electrifying sky shots and concludes with hearts full of memories and happiness. With over 1000 participants, vibrant crowds, and fierce competition, KS is your stage to shine, your arena to conquer, and your moment to make history.Bring your passion,power and show the world your unbreakable spirit. Kuruksastra awaits.
+          Every year, the fest begins with electrifying sky shots and concludes with hearts full of memories and happiness. With over 1000 participants, vibrant crowds, and fierce competition, KS is your stage to shine, your arena to conquer, and your moment to make history. Bring your passion, power and show the world your unbreakable spirit. Kuruksastra awaits.
         </p>
       </div>
     </section>

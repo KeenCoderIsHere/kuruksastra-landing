@@ -15,12 +15,8 @@ html::-webkit-scrollbar {
   position: relative;
   min-height: 200vh;
   overflow-x: hidden;
-  background: linear-gradient(120deg,
-      #0e5035 0%,
-      #1a7048 30%,
-      #1d7a4f 50%,
-      #1a7048 70%,
-      #0e5035 100%);
+  background:
+    radial-gradient(ellipse at center, #1a6e3e 0%, #156234 40%, #0e5035 100%);
 }
 
 .stickySection {
@@ -43,12 +39,8 @@ html::-webkit-scrollbar {
 .baseGradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg,
-      #0e5035 0%,
-      #1a7048 30%,
-      #1d7a4f 50%,
-      #1a7048 70%,
-      #0e5035 100%);
+  background:
+    radial-gradient(ellipse at center, #1a6e3e 0%, #156234 40%, #0e5035 100%);
 }
 
 .curvesSvg {

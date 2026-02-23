@@ -23,31 +23,33 @@
     /* Prevents flash — GSAP fromTo animates this 0→1 */
 }
 
-/* Dot Pattern restrained to octagon */
+/* Dot Pattern restrained to hexagon */
 .dotPattern {
     position: absolute;
-    width: 94%;
-    height: 92%;
+    width: 98%;
+    height: 98%;
     max-width: 1400px;
     z-index: 0;
     pointer-events: none;
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px);
     background-size: 24px 24px;
-    clip-path: polygon(6.67% 2.86%,
-            93.33% 2.86%,
-            98.33% 11.43%,
-            98.33% 88.57%,
-            93.33% 97.14%,
-            6.67% 97.14%,
-            1.67% 88.57%,
-            1.67% 11.43%);
+    /*
+      Pointy-top hex — outer polygon "600,4 1178,162 1178,538 600,696 22,538 22,162" on 1200x700
+      -> 50%/0.57%, 98.17%/23.14%, 98.17%/76.86%, 50%/99.43%, 1.83%/76.86%, 1.83%/23.14%
+    */
+    clip-path: polygon(50% 0.57%,
+            98.17% 23.14%,
+            98.17% 76.86%,
+            50% 99.43%,
+            1.83% 76.86%,
+            1.83% 23.14%);
 }
 
-/* Gold chamfered frame */
+/* Gold hexagon frame */
 .hexFrame {
     position: absolute;
-    width: 94%;
-    height: 92%;
+    width: 98%;
+    height: 98%;
     max-width: 1400px;
     pointer-events: none;
     z-index: 1;
@@ -126,6 +128,13 @@
 }
 
 /* ---- Responsive ---- */
+@media (min-width: 1024px) {
+    .hero {
+        padding-bottom: 500px;
+        height: 150vh;
+    }
+}
+
 @media (max-width: 999px) {
     .hexFrame {
         display: none;
@@ -139,8 +148,8 @@
     }
 
     .hexFrame {
-        height: 90%;
-        width: 93%;
+        height: 96%;
+        width: 94%;
     }
 }
 
@@ -183,12 +192,15 @@
     }
 
     .countdownContainer {
-        gap: clamp(16px, 4vw, 40px);
-        margin-top: 40px;
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 150px;
+        transform: scale(1.7);
+        transform-origin: center center;
     }
 
     .label {
         font-size: 10px;
-        margin-top: 8px;
+        margin-top: 12px;
     }
 }

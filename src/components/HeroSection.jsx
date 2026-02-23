@@ -99,7 +99,7 @@ export default function HeroSection({ isVisible }) {
       {/* Dot Pattern Background */}
       <div className={`dot-pattern ${styles.dotPattern}`} />
 
-      {/* Gold frame — style from LoadingAnimation, chamfered landscape shape */}
+      {/* Gold frame — flat-top hexagon, full height */}
       <svg className={`hex-frame ${styles.hexFrame}`} viewBox="0 0 1200 700" preserveAspectRatio="none">
         <defs>
           <linearGradient id="gold-gradient-hero" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -119,20 +119,33 @@ export default function HeroSection({ isVisible }) {
             </feMerge>
           </filter>
         </defs>
-        {/* Outer border */}
+        {/*
+          Pointy-top hexagon — TALLER, 3 concentric borders (triple-stripe style)
+          viewBox: 1200 × 700
+          Outer tips at y=4/y=696, flat sides at x=25/x=1175
+          Each border spaced ~14px apart
+        */}
+        {/* Border 1 — outermost (thick) */}
         <polygon
-          points="80,20 1120,20 1180,80 1180,620 1120,680 80,680 20,620 20,80"
+          points="600,4 1178,162 1178,538 600,696 22,538 22,162"
           fill="none"
           stroke="url(#gold-gradient-hero)"
-          strokeWidth="3"
+          strokeWidth="6"
           filter="url(#frame-shadow)"
         />
-        {/* Inner border */}
+        {/* Border 2 — middle */}
         <polygon
-          points="100,42 1100,42 1155,97 1155,603 1100,658 100,658 45,603 45,97"
+          points="600,22 1160,175 1160,525 600,678 40,525 40,175"
           fill="none"
           stroke="url(#gold-gradient-hero)"
-          strokeWidth="2"
+          strokeWidth="4"
+        />
+        {/* Border 3 — innermost */}
+        <polygon
+          points="600,40 1142,188 1142,512 600,660 58,512 58,188"
+          fill="none"
+          stroke="url(#gold-gradient-hero)"
+          strokeWidth="6"
         />
       </svg>
 
